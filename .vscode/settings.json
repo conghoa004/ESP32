@@ -1,0 +1,14 @@
+{
+    "liveServer.settings.port": 5501,
+    "files.associations": {
+        "*.ejs": "html",
+        "cmath": "cpp",
+        "array": "cpp",
+        "functional": "cpp",
+        "istream": "cpp",
+        "ostream": "cpp",
+        "tuple": "cpp",
+        "type_traits": "cpp",
+        "utility": "cpp"
+    }
+}
