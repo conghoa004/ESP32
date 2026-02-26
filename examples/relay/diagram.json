@@ -1,0 +1,36 @@
+{
+  "version": 1,
+  "author": "Hoa Cong",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "board-esp32-devkit-c-v4", "id": "esp", "top": -19.2, "left": -129.56, "attrs": {} },
+    { "type": "wokwi-relay-module", "id": "relay1", "top": -9.4, "left": 67.2, "attrs": {} },
+    { "type": "wokwi-led", "id": "led1", "top": -61.2, "left": 215, "attrs": { "color": "red" } },
+    { "type": "wokwi-vcc", "id": "vcc1", "top": -47.24, "left": 268.8, "attrs": {} },
+    { "type": "wokwi-gnd", "id": "gnd1", "top": 0, "left": 335.4, "attrs": {} },
+    { "type": "wokwi-led", "id": "led2", "top": 25.2, "left": 215, "attrs": { "color": "red" } },
+    {
+      "type": "wokwi-pushbutton",
+      "id": "btn1",
+      "top": 140.6,
+      "left": 57.6,
+      "attrs": { "color": "green", "xray": "1" }
+    }
+  ],
+  "connections": [
+    [ "esp:TX", "$serialMonitor:RX", "", [] ],
+    [ "esp:RX", "$serialMonitor:TX", "", [] ],
+    [ "relay1:VCC", "esp:3V3", "red", [ "h-57.6", "v-48", "h-124.8" ] ],
+    [ "relay1:GND", "esp:GND.2", "black", [ "h-67.2", "v-10" ] ],
+    [ "relay1:COM", "vcc1:VCC", "green", [ "h0" ] ],
+    [ "led1:C", "gnd1:GND", "green", [ "v0" ] ],
+    [ "led2:C", "gnd1:GND", "green", [ "v28.8", "h67.6", "v-96" ] ],
+    [ "led1:A", "relay1:NC", "green", [ "v0" ] ],
+    [ "led2:A", "relay1:NO", "green", [ "v9.6", "h-28.8" ] ],
+    [ "esp:5V", "btn1:2.l", "red", [ "h0.15", "v19.2", "h144" ] ],
+    [ "esp:GND.3", "btn1:1.l", "black", [ "h0" ] ],
+    [ "btn1:1.l", "esp:4", "green", [ "h-48", "v-38.4" ] ],
+    [ "relay1:IN", "btn1:1.l", "green", [ "h0" ] ]
+  ],
+  "dependencies": {}
+}
