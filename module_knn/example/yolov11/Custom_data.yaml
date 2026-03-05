@@ -1,0 +1,12 @@
+names:
+- BIODEGRADABLE
+- CARDBOARD
+- GLASS
+- METAL
+- PAPER
+- PLASTIC
+
+nc: 6 # Số lớp dự đoán
+train: '/kaggle/input/datasets/hoavan9/garbagedatasetfinal/GarbageDataset/train/images' # Path to train
+val: '/kaggle/input/datasets/hoavan9/garbagedatasetfinal/GarbageDataset/valid/images' # Path to val
+test: '/kaggle/input/datasets/hoavan9/garbagedatasetfinal/GarbageDataset/test/images' # Path to test

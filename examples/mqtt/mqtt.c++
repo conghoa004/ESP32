@@ -12,9 +12,9 @@
 LiquidCrystal_I2C lcd(I2C_ADDR, LCD_COLUMNS, LCD_LINES);
 
 // MQTT
-const char *MQTTServer = "broker.emqx.io"; // broker.hivemq.com
+const char *MQTTServer = "44.232.241.40"; // broker.hivemq.com // 44.232.241.40 // 35.172.255.22 // broker.emqx.io
 const char *MQTT_Topic = "conghoa/esp32";
-const char *MQTT_ID = "eb7ec38e-6d8f-439e-baff-caaf0881fb26";
+const char *MQTT_ID = "eb7ec38e-6d8f-439e-baff-caaf0881fb2ghg6";
 int Port = 1883;
 
 WiFiClient espClient;
