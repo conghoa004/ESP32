@@ -1,5 +1,0 @@
-pip install opencv-python
-pip install face_recognition
-pip install paho-mqtt
-pip install mysql-connector-python
-pip install tensorflow
